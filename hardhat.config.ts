@@ -2,12 +2,13 @@ import { HardhatUserConfig, task } from "hardhat/config";
 import deployPool from "./tasks/deployPool";
 
 // PLUGINS
-import "@nomiclabs/hardhat-ethers";
+import "@nomicfoundation/hardhat-ethers";
 import "@nomicfoundation/hardhat-verify";
 import "solidity-coverage";
 import "hardhat-gas-reporter";
 import "@openzeppelin/hardhat-upgrades";
 import "hardhat-contract-sizer";
+import "hardhat-deploy";
 // import "@typechain/hardhat";
 
 // Process Env Variables
