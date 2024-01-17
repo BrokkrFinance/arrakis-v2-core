@@ -23,13 +23,15 @@ export const getAddresses = (network: string): Addresses | any => {
         WETH: "0x82aF49447D8a07e3bd95BD0d56f35241523fBab1",
         WMATIC: "",
         USDC: "0xFF970A61A04b1cA14834A43f5dE4533eBDDB5CC8",
+        GMX: "0xfc5a1a6eb076a2c7ad06ed22c90d7e710e35ad0a",
+        GNS: "0x18c11fd286c5ec11c3b683caa813b77f5163a122",
         ArrakisV2Implementation: "0xAf0f96e8702cB1b8160e43c8c020C608cD7B134d",
         ArrakisV2Beacon: "0x1D91F6D917ec51dE53A5789c34fFF777a58759B6",
         ArrakisV2Factory: "0xECb8Ffcb2369EF188A082a662F496126f66c8288",
         ArrakisV2Helper: "0x07d2CeB4869DFE17e8D48c92A71eDC3AE564449f",
         ArrakisV2Resolver: "0xb11bb8ad710579Cc5ED16b1C8587808109c1f193",
-        OwnerAddr: "0x4821fCb59f13376eDd7bC82f6eE37785F3A7AB66",
-        ManagerAddr: "0x4821fCb59f13376eDd7bC82f6eE37785F3A7AB66",
+        OwnerAddr: "0x3ed85f0488EdF594F212c5346E7893B42EC33Af7",
+        ManagerAddr: "0xED75acFb7B32337dc72dE1A7d3f23022a5F7f3a7",
       };
     case "mainnet":
       return {
@@ -43,8 +45,8 @@ export const getAddresses = (network: string): Addresses | any => {
         ArrakisV2Factory: "0xECb8Ffcb2369EF188A082a662F496126f66c8288",
         ArrakisV2Helper: "0x07d2CeB4869DFE17e8D48c92A71eDC3AE564449f",
         ArrakisV2Resolver: "0xb11bb8ad710579Cc5ED16b1C8587808109c1f193",
-        OwnerAddr: "0x4821fCb59f13376eDd7bC82f6eE37785F3A7AB66",
-        ManagerAddr: "0x4821fCb59f13376eDd7bC82f6eE37785F3A7AB66",
+        OwnerAddr: "0x3ed85f0488EdF594F212c5346E7893B42EC33Af7",
+        ManagerAddr: "0xED75acFb7B32337dc72dE1A7d3f23022a5F7f3a7",
       };
     case "polygon":
       return {
@@ -58,8 +60,8 @@ export const getAddresses = (network: string): Addresses | any => {
         ArrakisV2Factory: "0xECb8Ffcb2369EF188A082a662F496126f66c8288",
         ArrakisV2Helper: "0x07d2CeB4869DFE17e8D48c92A71eDC3AE564449f",
         ArrakisV2Resolver: "0xb11bb8ad710579Cc5ED16b1C8587808109c1f193",
-        OwnerAddr: "0x4821fCb59f13376eDd7bC82f6eE37785F3A7AB66",
-        ManagerAddr: "0x4821fCb59f13376eDd7bC82f6eE37785F3A7AB66",
+        OwnerAddr: "0x3ed85f0488EdF594F212c5346E7893B42EC33Af7",
+        ManagerAddr: "0xED75acFb7B32337dc72dE1A7d3f23022a5F7f3a7",
       };
     case "optimism":
       return {
@@ -73,8 +75,8 @@ export const getAddresses = (network: string): Addresses | any => {
         ArrakisV2Factory: "0xECb8Ffcb2369EF188A082a662F496126f66c8288",
         ArrakisV2Helper: "0x07d2CeB4869DFE17e8D48c92A71eDC3AE564449f",
         ArrakisV2Resolver: "0xb11bb8ad710579Cc5ED16b1C8587808109c1f193",
-        OwnerAddr: "0x4821fCb59f13376eDd7bC82f6eE37785F3A7AB66",
-        ManagerAddr: "0x4821fCb59f13376eDd7bC82f6eE37785F3A7AB66",
+        OwnerAddr: "0x3ed85f0488EdF594F212c5346E7893B42EC33Af7",
+        ManagerAddr: "0xED75acFb7B32337dc72dE1A7d3f23022a5F7f3a7",
       };
     case "arbitrum":
       return {
@@ -82,14 +84,16 @@ export const getAddresses = (network: string): Addresses | any => {
         SwapRouter: "0xE592427A0AEce92De3Edee1F18E0157C05861564",
         WETH: "0x82aF49447D8a07e3bd95BD0d56f35241523fBab1",
         WMATIC: "",
+        GMX: "0xfc5a1a6eb076a2c7ad06ed22c90d7e710e35ad0a",
+        GNS: "0x18c11fd286c5ec11c3b683caa813b77f5163a122",
         USDC: "0xFF970A61A04b1cA14834A43f5dE4533eBDDB5CC8",
         ArrakisV2Implementation: "0xAf0f96e8702cB1b8160e43c8c020C608cD7B134d",
         ArrakisV2Beacon: "0x1D91F6D917ec51dE53A5789c34fFF777a58759B6",
         ArrakisV2Factory: "0xECb8Ffcb2369EF188A082a662F496126f66c8288",
         ArrakisV2Helper: "0x07d2CeB4869DFE17e8D48c92A71eDC3AE564449f",
         ArrakisV2Resolver: "0xb11bb8ad710579Cc5ED16b1C8587808109c1f193",
-        OwnerAddr: "0x4821fCb59f13376eDd7bC82f6eE37785F3A7AB66",
-        ManagerAddr: "0x4821fCb59f13376eDd7bC82f6eE37785F3A7AB66",
+        OwnerAddr: "0x3ed85f0488EdF594F212c5346E7893B42EC33Af7",
+        ManagerAddr: "0x02E4e5861D08b35513EB693b6E5030245e754fE5",
       };
     case "binance":
       return {
@@ -103,8 +107,8 @@ export const getAddresses = (network: string): Addresses | any => {
         ArrakisV2Factory: "0xECb8Ffcb2369EF188A082a662F496126f66c8288",
         ArrakisV2Helper: "0x07d2CeB4869DFE17e8D48c92A71eDC3AE564449f",
         ArrakisV2Resolver: "0xb11bb8ad710579Cc5ED16b1C8587808109c1f193",
-        OwnerAddr: "0x4821fCb59f13376eDd7bC82f6eE37785F3A7AB66",
-        ManagerAddr: "0x4821fCb59f13376eDd7bC82f6eE37785F3A7AB66",
+        OwnerAddr: "0x3ed85f0488EdF594F212c5346E7893B42EC33Af7",
+        ManagerAddr: "0xED75acFb7B32337dc72dE1A7d3f23022a5F7f3a7",
       };
     case "goerli":
       return {
@@ -118,8 +122,8 @@ export const getAddresses = (network: string): Addresses | any => {
         ArrakisV2Factory: "0xECb8Ffcb2369EF188A082a662F496126f66c8288",
         ArrakisV2Helper: "0x07d2CeB4869DFE17e8D48c92A71eDC3AE564449f",
         ArrakisV2Resolver: "0xb11bb8ad710579Cc5ED16b1C8587808109c1f193",
-        OwnerAddr: "0x4821fCb59f13376eDd7bC82f6eE37785F3A7AB66",
-        ManagerAddr: "0x4821fCb59f13376eDd7bC82f6eE37785F3A7AB66",
+        OwnerAddr: "0x3ed85f0488EdF594F212c5346E7893B42EC33Af7",
+        ManagerAddr: "0xED75acFb7B32337dc72dE1A7d3f23022a5F7f3a7",
       };
     default:
       throw new Error(`No addresses for Network: ${network}`);
