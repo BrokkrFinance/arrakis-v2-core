@@ -110,6 +110,21 @@ export const getAddresses = (network: string): Addresses | any => {
         OwnerAddr: "0x3ed85f0488EdF594F212c5346E7893B42EC33Af7",
         ManagerAddr: "0xED75acFb7B32337dc72dE1A7d3f23022a5F7f3a7",
       };
+    case "base":
+      return {
+        UniswapV3Factory: "0x33128a8fC17869897dcE68Ed026d694621f6FDfD",
+        SwapRouter: "0x2626664c2603336E57B271c5C0b26F421741e481",
+        WETH: "",
+        WMATIC: "",
+        USDC: "",
+        ArrakisV2Implementation: "0x7F346F1eB7a65fF83f51B3FD76dCc70979e6DF38",
+        ArrakisV2Beacon: "0x1D91F6D917ec51dE53A5789c34fFF777a58759B6",
+        ArrakisV2Factory: "0xECb8Ffcb2369EF188A082a662F496126f66c8288",
+        ArrakisV2Helper: "0x89E4bE1F999E3a58D16096FBe405Fc2a1d7F07D6",
+        ArrakisV2Resolver: "0x535C5fDf31477f799366DF6E4899a12A801cC7b8",
+        OwnerAddr: "0x3ed85f0488EdF594F212c5346E7893B42EC33Af7",
+        ManagerAddr: "0xED75acFb7B32337dc72dE1A7d3f23022a5F7f3a7",
+      };
     case "goerli":
       return {
         UniswapV3Factory: "0x1F98431c8aD98523631AE4a59f267346ea31F984",

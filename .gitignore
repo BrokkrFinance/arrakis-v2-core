@@ -34,3 +34,4 @@ dist
 
 # Others
 yarn-error.log
+yarn.lock

@@ -56,15 +56,15 @@ export default function () {
       await hre.run("compile");
 
       // set this for each vault separately
-      const tokenName = "ETHGNS30Adaptive1";
-      const tokenSymbol = "EGN30A1";
-      const token0 = "0x18c11fd286c5ec11c3b683caa813b77f5163a122";
-      const token1 = "0x82aF49447D8a07e3bd95BD0d56f35241523fBab1";
+      const tokenName = "BTCETH5BB";
+      const tokenSymbol = "BE5BB";
+      const token0 = "0x7ceB23fD6bC0adD59E62ac25578270cFf1b9f619";
+      const token1 = "0x1BFD67037B42Cf73acF2047067bd4F2C47D9BfD6";
       const ownerAddr = "0x3ed85f0488EdF594F212c5346E7893B42EC33Af7";
-      const managerAddr = "0x02E4e5861D08b35513EB693b6E5030245e754fE5";
-      const init0 = "5";
-      const init1 = "395630655045675";
-      const routers = ["0xE592427A0AEce92De3Edee1F18E0157C05861564"];
+      const managerAddr = "0x3FBc2F0BB12aeCaF80FFB5152b8ee912f1e1B5a3";
+      const init0 = "299940012000000";
+      const init1 = "100";
+      const routers = ["0xec7BE89e9d109e7e3Fec59c222CF297125FEFda2"];
       const fees = [500];
 
       // arbitrum settings
