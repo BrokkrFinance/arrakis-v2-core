@@ -100,6 +100,11 @@
       "address": "0xf1EEc2B9d2c3Fcbfa433DF3490d76312b260878A",
       "txHash": "0xae9d1169bb828519246274867c776e9aadfeba0cd6a929cc8910dc1bd48a3040",
       "kind": "uups"
+    },
+    {
+      "address": "0x7480669123ED095C39Bdf5bF00Dc062Fc2772DC6",
+      "txHash": "0xdcaf7f5e9b3515b8614e79795fa612f1b0b364808b4efdfb3080eab142385fd7",
+      "kind": "uups"
     }
   ],
   "impls": {

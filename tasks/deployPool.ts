@@ -3,6 +3,7 @@ import { HardhatRuntimeEnvironment } from "hardhat/types";
 import { getAddresses } from "../src/addresses";
 import { ArrakisV2 as ArrakisV2Type } from "../typechain/contracts/ArrakisV2";
 import { Contract, getDefaultProvider } from "ethers";
+import { deployment_wait_time, sleep } from "../src/utils";
 
 async function deployArtifact(
   contractName: any,
@@ -56,16 +57,27 @@ export default function () {
       await hre.run("compile");
 
       // set this for each vault separately
-      const tokenName = "ETHGNS30Adaptive1";
-      const tokenSymbol = "EGN30A1";
-      const token0 = "0x18c11fd286c5ec11c3b683caa813b77f5163a122";
-      const token1 = "0x82aF49447D8a07e3bd95BD0d56f35241523fBab1";
-      const ownerAddr = "0x3ed85f0488EdF594F212c5346E7893B42EC33Af7";
-      const managerAddr = "0x02E4e5861D08b35513EB693b6E5030245e754fE5";
-      const init0 = "5";
-      const init1 = "395630655045675";
+      const tokenName = "BTCETH5BB";
+      const tokenSymbol = "BE5BB";
+      const token0 = "0x1BFD67037B42Cf73acF2047067bd4F2C47D9BfD6";
+      const token1 = "0x7ceB23fD6bC0adD59E62ac25578270cFf1b9f619";
+      const ownerAddr = "0x629D40d973359D8fFf3123aD8966Dc39e0CE8c45";
+      const managerAddr = "0x3FBc2F0BB12aeCaF80FFB5152b8ee912f1e1B5a3";
+      const init0 = "100";
+      const init1 = "299940012000000";
       const routers = ["0xE592427A0AEce92De3Edee1F18E0157C05861564"];
       const fees = [500];
+
+      // const tokenName = "Test";
+      // const tokenSymbol = "Test";
+      // const token0 = "0x82aF49447D8a07e3bd95BD0d56f35241523fBab1";
+      // const token1 = "0xaf88d065e77c8cC2239327C5EDb3A432268e5831";
+      // const ownerAddr = "0x629D40d973359D8fFf3123aD8966Dc39e0CE8c45";
+      // const managerAddr = "0x3FBc2F0BB12aeCaF80FFB5152b8ee912f1e1B5a3";
+      // const init0 = "10000";
+      // const init1 = "1000000";
+      // const routers = ["0xE592427A0AEce92De3Edee1F18E0157C05861564"];
+      // const fees = [500];
 
       // arbitrum settings
       const addresses = getAddresses(hre.network.name);
@@ -133,12 +145,27 @@ export default function () {
       const arrakisV2Address: string = arrakisV2.target.toString();
 
       if (shouldVerify) {
+        console.log(`Waiting ${deployment_wait_time / 1000} seconds for contract to be ready for verification...`);
+        await sleep(deployment_wait_time);
+
         console.log("Verifying: ArrakisV2 implementation");
         const arrakisV2ImplAddress =
           await hre.upgrades.erc1967.getImplementationAddress(arrakisV2Address);
-        await hre.run("verify:verify", { address: arrakisV2ImplAddress });
+        
+        console.log("Implementation address:", arrakisV2ImplAddress);
+        
+        try {
+          await hre.run("verify:verify", { address: arrakisV2ImplAddress });
+        } catch (error) {
+          console.error("Verification failed:", error);
+        }
+
         console.log("Verifying: ArrakisV2 proxy");
-        await hre.run("verify:verify", { address: arrakisV2Address });
+        try {
+          await hre.run("verify:verify", { address: arrakisV2Address });
+        } catch (error) {
+          console.error("Proxy verification failed:", error);
+        }
       }
       console.log("ArrakisV2 proxy deployed at: ", arrakisV2Address);
 

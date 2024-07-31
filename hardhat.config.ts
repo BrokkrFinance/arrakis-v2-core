@@ -27,6 +27,8 @@ const config: HardhatUserConfig = {
       avalanche: `${process.env.SNOWTRACE_API_KEY}`,
       bsc: `${process.env.BSC_SCAN_API_KEY}`,
       arbitrumOne: `${process.env.ARBI_SCAN_API_KEY}`,
+      polygon: `${process.env.POLYGON_SCAN_API_KEY}`,
+      base: `${process.env.BASE_SCAN_API_KEY}`,
     },
   },
 
@@ -50,9 +52,9 @@ const config: HardhatUserConfig = {
       url: `https://eth-mainnet.alchemyapi.io/v2/${ALCHEMY_ID}`,
     },
     polygon: {
-      accounts: PK ? [PK] : [],
+      accounts: [`0x${process.env.MAINNET_PRIVATE_KEY}`],
       chainId: 137,
-      url: `https://polygon-mainnet.g.alchemy.com/v2/${ALCHEMY_ID}`,
+      url: `${process.env["POLYGON_ARCHIVE_NODE_URL"]}`,
     },
     optimism: {
       accounts: PK ? [PK] : [],
@@ -63,6 +65,11 @@ const config: HardhatUserConfig = {
       accounts: [`0x${process.env.MAINNET_PRIVATE_KEY}`],
       chainId: 42161,
       url: `${process.env["ARBITRUM_ARCHIVE_NODE_URL"]}`,
+    },
+    base: {
+      accounts: [`0x${process.env.MAINNET_PRIVATE_KEY}`],
+      chainId: 8453,
+      url: `${process.env["BASE_ARCHIVE_NODE_URL"]}`,
     },
     binance: {
       accounts: PK ? [PK] : [],

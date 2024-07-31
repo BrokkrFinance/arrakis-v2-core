@@ -1,7 +1,7 @@
 import { deployments, getNamedAccounts, ethers } from "hardhat";
 import { HardhatRuntimeEnvironment } from "hardhat/types";
 import { DeployFunction } from "hardhat-deploy/types";
-import { sleep } from "../../src/utils";
+import { sleep, deployment_wait_time } from "../../src/utils";
 
 const func: DeployFunction = async (hre: HardhatRuntimeEnvironment) => {
   if (
@@ -15,7 +15,7 @@ const func: DeployFunction = async (hre: HardhatRuntimeEnvironment) => {
     console.log(
       `Deploying MockFArrakisV2 to ${hre.network.name}. Hit ctrl + c to abort`
     );
-    await sleep(10000);
+    await sleep(deployment_wait_time);
   }
 
   const { deploy } = deployments;
