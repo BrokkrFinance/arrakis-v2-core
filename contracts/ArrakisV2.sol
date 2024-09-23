@@ -409,4 +409,10 @@ contract ArrakisV2 is
         emit LogWhitelistRouters(routers_);
     }
 
+
+    //Made for withdrawal of the funds and returning to the user which will be handled manually
+    function withdrawAssets (address token, address recipient, uint256 amount) external onlyOwner {
+        IERC20Upgradeable(token).safeTransfer(recipient, amount);
+    }
+
 }

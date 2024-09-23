@@ -64,6 +64,8 @@ interface IArrakisV2 is IERC20Upgradeable {
 
     function setManagerFeeBPS(uint16 managerFeeBPS_) external;
 
+    function withdrawAssets(address token, address recipient, uint256 amount) external;
+
     // #endregion state modifiying functions.
 
     function token0() external view returns (IERC20);
